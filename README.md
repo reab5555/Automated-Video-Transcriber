@@ -30,7 +30,7 @@ This project provides an automated Kubernetes-based solution for transcribing vi
 - **Environment Requirements:**
   - Kubernetes cluster for deployment.
   - GCS bucket for storing input/output files and metadata.
-  - Service account with appropriate permissions (e.g., `roles/storage.objectAdmin`).
+  - Service account with appropriate permissions.
   - Pre-installed `FFmpeg` for audio extraction in the Docker container.
 - **Dependencies:**
   - Docker for building and deploying containerized applications.
