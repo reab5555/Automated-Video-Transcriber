@@ -8,7 +8,7 @@ This project provides an automated Kubernetes-based solution for transcribing vi
 
 This solution is designed to streamline the transcription and translation of video files in a scalable and automated manner. By integrating advanced AI models like OpenAI Whisper for transcription and MarianMT for multilingual translation, the system ensures high-quality subtitle generation. 
 
-The pipeline operates within a Kubernetes environment, enabling parallel processing of multiple files for maximum efficiency. A watch folder functionality ensures that only new and unprocessed videos are detected and handled, while the integration with Google Cloud Storage (GCS) facilitates seamless input/output file management. With automated scheduling and customizable parameters, this system is ideal for applications that require regular and reliable transcription and translation of multimedia content.
+The pipeline operates within a Kubernetes environment, enabling parallel processing of multiple files for maximum efficiency. A watch folder functionality ensures that only new and unprocessed videos are detected and handled, while the integration with Google Cloud Storage (GCS) facilitates input/output file management. With automated scheduling and customizable parameters, this system is ideal for applications that require regular and reliable transcription and translation of multimedia content.
 
 ---------------------------------------------------------------------------------
 
