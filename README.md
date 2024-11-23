@@ -72,12 +72,12 @@ kubectl apply -f cronjob.yaml
 
 ### Customization   
 **Transcription Settings:**      
-Modify parameters in AudioProcessor within transcriber.py to adjust transcription behavior.   
-Default Whisper model: turbo.   
+- Modify parameters in AudioProcessor within transcriber.py to adjust transcription behavior.   
+- Default Whisper model: turbo.   
 
 **Translation Settings:**     
-Default target languages: en (English) and he (Hebrew).   
-Customize translation parameters in translator.py.   
+- Default target languages: en (English) and he (Hebrew).   
+- Customize translation parameters in translator.py.   
 
 ### Workflow
 
