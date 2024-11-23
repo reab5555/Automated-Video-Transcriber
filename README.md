@@ -40,6 +40,14 @@ This project provides an automated Kubernetes-based solution for transcribing vi
 
 ---
 
+## Setup and Deployment
+
+### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd <repository-folder>
+```
+
 ### 2. Configure Environment Variables
 Set the following environment variables:   
 
@@ -92,10 +100,3 @@ Access the logs stored in the metadata directory:
 gsutil cat gs://<BUCKET_NAME>/<METADATA_PREFIX>/logs/<DATE>_processing_log.json
 ```
 
-
-## Setup and Deployment
-
-### 1. Clone the Repository
-```bash
-git clone <repository-url>
-cd <repository-folder>
