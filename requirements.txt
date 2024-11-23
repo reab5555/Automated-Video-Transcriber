@@ -1,0 +1,10 @@
+torch
+accelerate
+librosa
+tqdm
+openai-whisper
+transformers
+sacremoses
+sentencepiece
+google-cloud-storage
+numpy

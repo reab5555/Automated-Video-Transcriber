@@ -1,0 +1,71 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: transcription-cronjob
+spec:
+  schedule: "0 1 * * *"  # Run at 1:00 AM Israel time
+  timeZone: "Asia/Jerusalem"
+  jobTemplate:
+    spec:
+      parallelism: 5
+      completions: 5
+      template:
+        metadata:
+          labels:
+            app: transcriber
+        spec:
+          affinity:
+            podAntiAffinity:
+              preferredDuringSchedulingIgnoredDuringExecution:
+              - weight: 100
+                podAffinityTerm:
+                  labelSelector:
+                    matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                      - transcriber
+                  topologyKey: "kubernetes.io/hostname"
+          restartPolicy: Never
+          containers:
+          - name: transcriber
+            image: me-west1-docker.pkg.dev/python-code-running/transcriberrep/transcriber:latest
+            imagePullPolicy: IfNotPresent
+            resources:
+              limits:
+                memory: "8Gi"
+                cpu: "2"
+              requests:
+                memory: "4Gi"
+                cpu: "1"
+            env:
+            - name: BUCKET_NAME
+              value: "main_il"
+            - name: INPUT_PREFIX
+              value: "transcription_workplace/input_directory/"
+            - name: OUTPUT_PREFIX
+              value: "transcription_workplace/output_directory/"
+            - name: METADATA_PREFIX
+              value: "transcription_workplace/metadata_directory/"
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: "/var/secrets/google/kubernetes-access-perm.json"
+            # Force CPU device for Whisper
+            - name: CUDA_VISIBLE_DEVICES
+              value: ""
+            volumeMounts:
+            - name: gcp-credentials
+              mountPath: "/var/secrets/google"
+              readOnly: true
+            # Cache volumes for models
+            - name: whisper-cache
+              mountPath: "/root/.cache/whisper"
+            - name: huggingface-cache
+              mountPath: "/root/.cache/huggingface"
+          volumes:
+          - name: gcp-credentials
+            secret:
+              secretName: gcp-credentials
+          - name: whisper-cache
+            emptyDir: {}
+          - name: huggingface-cache
+            emptyDir: {}
