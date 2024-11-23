@@ -51,10 +51,10 @@ cd <repository-folder>
 ### 2. Configure Environment Variables
 Set the following environment variables:   
 
-BUCKET_NAME: Name of the GCS bucket.   
-INPUT_PREFIX: Input directory in the GCS bucket.   
-OUTPUT_PREFIX: Output directory in the GCS bucket.   
-METADATA_PREFIX: Metadata directory in the GCS bucket.   
+**BUCKET_NAME:** Name of the GCS bucket.   
+**INPUT_PREFIX:** Input directory in the GCS bucket.   
+**OUTPUT_PREFIX:** Output directory in the GCS bucket.   
+**METADATA_PREFIX:** Metadata directory in the GCS bucket.   
 
 ### 3. Build and Push Docker Image
 Run the provided script to build and upload the Docker image:   
