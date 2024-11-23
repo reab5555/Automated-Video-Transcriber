@@ -11,6 +11,9 @@ This project provides an automated Kubernetes-based solution for transcribing vi
 ## Features
 - **Automatic Transcription:** Transcribes videos into the original language using OpenAI Whisper.
 - **Multilingual Translation:** Automatically translates the original transcription to English and Hebrew using MarianMT models.
+- **Watch Folder Functionality:**
+  - Continuously monitors a GCS input directory to detect new video files.
+  - Ensures that only unprocessed files are picked up for transcription and translation.
 - **Scalable and Efficient Processing:**
   - Processes multiple videos in parallel using Kubernetes pods.
   - Automated scheduling with Kubernetes CronJob for daily processing.
