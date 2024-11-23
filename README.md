@@ -72,17 +72,17 @@ Default target languages: en (English) and he (Hebrew).
 Customize translation parameters in translator.py.   
 
 ### Workflow
-Video File Detection:   
+***Video File Detection:***   
     Scans the GCS input directory for new video files.   
-Audio Extraction:   
+***Audio Extraction:***   
     Extracts audio from video using FFmpeg.   
-Transcription:   
+***Transcription:***   
     Generates subtitles in the original language using OpenAI Whisper.   
-Translation:   
+***Translation:***   
     Converts subtitles to English and Hebrew.   
-Output Storage:   
+***Output Storage:***   
     Uploads generated SRT files to the GCS output directory.   
-Metadata Update:   
+***Metadata Update:***   
     Tracks processed files to prevent duplicate processing.   
 
 ### Example Commands   
