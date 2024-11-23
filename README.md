@@ -71,16 +71,16 @@ kubectl apply -f cronjob.yaml
 ```
 
 ### Customization   
-Transcription Settings:      
+**Transcription Settings:**      
 Modify parameters in AudioProcessor within transcriber.py to adjust transcription behavior.   
 Default Whisper model: turbo.   
 
-Translation Settings:   
+:**Translation Settings::**     
 Default target languages: en (English) and he (Hebrew).   
 Customize translation parameters in translator.py.   
 
 ### Workflow
-  
+
 **Video File Detection:** Scans the GCS input directory for new video files.   
 **Audio Extraction:** Extracts audio from video using FFmpeg.   
 **Transcription:** Generates subtitles in the original language using OpenAI Whisper.   
