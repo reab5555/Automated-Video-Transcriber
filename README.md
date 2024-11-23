@@ -14,8 +14,6 @@ The pipeline operates within a Kubernetes environment, enabling parallel process
 
 <img src="appendix/workflow.png" alt="Alt text for image1" width="600"/>
 
----
-
 ## Features
 - **Automatic Transcription:** Transcribes videos into the original language using OpenAI Whisper.
 - **Multilingual Translation:** Automatically translates the original transcription to English and Hebrew using MarianMT models.
