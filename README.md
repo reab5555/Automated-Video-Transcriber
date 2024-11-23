@@ -2,7 +2,7 @@
 
 # Automated Video Transcription and Translation
 
-This project provides an automated Kubernetes-based solution for transcribing video files to subtitles in the original language, English, and Hebrew. It leverages AI models for transcription and translation, ensuring high accuracy and scalability for subtitle generation.
+This project provides an automated solution for transcribing video files to subtitles in the original language, English, and Hebrew. It leverages AI models for transcription and translation, ensuring high accuracy and scalability for subtitle generation.
 
 ## Description
 
